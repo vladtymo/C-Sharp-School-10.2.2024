@@ -29,3 +29,19 @@ Console.ResetColor();
 Console.OutputEncoding = Encoding.UTF8;
 
 Console.WriteLine("Гарного дня!");
+
+// --------------- введення з консолі
+
+// типи даних:
+// string   - рядок
+// int      - ціле число
+
+// створення змінної: тип ім'я = значення;
+string nickname = Console.ReadLine();
+string username = "vladnaz";
+
+Console.WriteLine($"Hello, {nickname} {2 + 2}!");
+
+int birthYear = int.Parse(Console.ReadLine());
+
+Console.WriteLine($"You are {DateTime.Now.Year - birthYear} years old!");
