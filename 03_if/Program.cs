@@ -12,7 +12,8 @@ while (true)
     Console.Clear();
     
     Console.Write("Enter your rate (1-6): ");
-    int rate = Convert.ToInt32(Console.ReadLine());
+    if (!int.TryParse(Console.ReadLine(), out int rate)) 
+        continue;
     
     int number = rand.Next(1, 7); // генерація випадкового числа з 1 до 7 (не включно)
     Console.WriteLine($"The number is {number}");
