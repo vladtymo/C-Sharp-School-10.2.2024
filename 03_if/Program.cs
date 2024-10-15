@@ -9,11 +9,11 @@ int count = 0;
 
 while (true)
 {
-    Console.Clear();
-    
     Console.Write("Enter your rate (1-6): ");
-    if (!int.TryParse(Console.ReadLine(), out int rate)) 
+    if (!int.TryParse(Console.ReadKey().KeyChar.ToString(), out int rate)) 
         continue;
+
+    Console.Clear();
     
     int number = rand.Next(1, 7); // генерація випадкового числа з 1 до 7 (не включно)
     Console.WriteLine($"The number is {number}");
@@ -50,9 +50,6 @@ while (true)
     Console.ResetColor();
 
     Console.WriteLine($"Score: {score}");
-    
-    Console.WriteLine("Press any key to continue...");
-    Console.ReadKey();
 }
 
 
