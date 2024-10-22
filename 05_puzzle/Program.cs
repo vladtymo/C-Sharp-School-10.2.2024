@@ -1,13 +1,15 @@
 ﻿const int size = 4;
+const int emptyNumber = 16;
+
 int zeroX = 2;
 int zeroY = 2;
 
 int[,] puzzle = new int[size, size]
 {
-    { 1, 2, 3, 4 },
-    { 5, 6, 7, 8 },
-    { 9, 10, 0, 12 },
-    { 13, 14, 15, 11 }
+    { 7, 2, 6, 4 },
+    { 8, 11, 9, 13 },
+    { 3, 10, 16, 12 },
+    { 1, 5, 15, 14 }
 };
 
 Print();
@@ -20,12 +22,30 @@ while (true)
     switch (key)
     {
         case ConsoleKey.RightArrow:
+            // якщо пуста комірка знаходиться в першій колонці
+            if (zeroX == 0) 
+                break; // вихід
+
             Swap(ref puzzle[zeroY, zeroX], ref puzzle[zeroY, zeroX - 1]);
             --zeroX;
             break;
         case ConsoleKey.LeftArrow:
+            if (zeroX == size - 1) break;
+
             Swap(ref puzzle[zeroY, zeroX], ref puzzle[zeroY, zeroX + 1]);
             ++zeroX;
+            break;
+        case ConsoleKey.UpArrow:
+            if (zeroY == size - 1) break;
+
+            Swap(ref puzzle[zeroY, zeroX], ref puzzle[zeroY + 1, zeroX]);
+            ++zeroY;
+            break;
+        case ConsoleKey.DownArrow:
+            if (zeroY == 0) break;
+
+            Swap(ref puzzle[zeroY, zeroX], ref puzzle[zeroY - 1, zeroX]);
+            --zeroY;
             break;
         default:
             break;
@@ -48,10 +68,16 @@ void Print()
     {
         for (int col = 0; col < size; col++)
         {
-            if (puzzle[row, col] == 0)
+            // перевірка чи комірка на свому місці
+            if (puzzle[row, col] == row * size + col + 1)
+                Console.ForegroundColor = ConsoleColor.Green;
+            
+            if (puzzle[row, col] == emptyNumber) // 16
                 Console.Write($"[  ] ");
             else
                 Console.Write($"[{puzzle[row, col],2}] ");
+
+            Console.ResetColor();
         }
         Console.WriteLine();
     }
