@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_array", "04_puzzle\04_ar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_puzzle", "05_puzzle\05_puzzle.csproj", "{FEE28696-13A2-4115-B44D-91A56B7ECD24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_tanks", "06_tanks\06_tanks.csproj", "{149AEF3A-891F-4BC8-964C-90CDAE75CA48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{FEE28696-13A2-4115-B44D-91A56B7ECD24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEE28696-13A2-4115-B44D-91A56B7ECD24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEE28696-13A2-4115-B44D-91A56B7ECD24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{149AEF3A-891F-4BC8-964C-90CDAE75CA48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{149AEF3A-891F-4BC8-964C-90CDAE75CA48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{149AEF3A-891F-4BC8-964C-90CDAE75CA48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{149AEF3A-891F-4BC8-964C-90CDAE75CA48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
