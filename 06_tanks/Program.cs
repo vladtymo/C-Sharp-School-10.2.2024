@@ -8,7 +8,8 @@
     public static void Main(string[] args)
     {
         Console.CursorVisible = false;
-        
+        DrawTankUp();
+            
         while (true)
         {
             Move();

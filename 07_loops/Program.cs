@@ -1,6 +1,7 @@
 ﻿// ---------- loops -----------
 // for(змінна; умова; вираз) {}
 
+Console.Write("Enter number: ");
 int count = int.Parse(Console.ReadLine());
 
 for (int i = 0; i < count; ++i)
@@ -38,3 +39,20 @@ while (true)
 }
 
 Console.WriteLine("Have a nice day!");
+
+// Користувач вводить діапазон. Визначити кількість чисел, які кратні 7-ми.
+Console.Write("Enter start: ");
+int a = int.Parse(Console.ReadLine());
+
+Console.Write("Enter end: ");
+int b = int.Parse(Console.ReadLine());
+
+int num = 0; // кількість
+
+for (int i = a; i <= b; ++i)
+{
+    if (i % 7 == 0)
+        num++;
+}
+
+Console.WriteLine($"Знайдено чисел кратних 7-ми: {num}");
