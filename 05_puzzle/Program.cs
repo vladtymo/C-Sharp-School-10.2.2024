@@ -18,7 +18,7 @@ while (true)
 {
 
     var key = Console.ReadKey().Key;
-
+    
     switch (key)
     {
         case ConsoleKey.RightArrow:
