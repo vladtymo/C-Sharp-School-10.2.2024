@@ -11,6 +11,10 @@ int price4 = 999;
 
 int[] prices = [ 120, 99, 44, 567, 561 ];
 
+string[] colors = { "red", "blue", "green", "yellow", "yellow" };
+
+colors[0] = "black";
+
 // індекс елементів починається з 0
 prices[0] = 330;
 
