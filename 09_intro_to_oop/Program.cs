@@ -9,7 +9,9 @@ internal class Program
         dog.name = "James";
         dog.Jump();
         dog.SayGav();
+     
         
+        List<Dog> dogs = new List<Dog> { dog };
     }
 }
 
