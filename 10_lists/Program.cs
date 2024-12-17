@@ -9,6 +9,8 @@ Console.WriteLine("Min: " + prices.Min());
 Console.WriteLine("Max: " + prices.Max());
 
 prices.Add(789);
+prices.Remove(99.5);
+prices.RemoveAt(0);
 
 // ! - not
 if (!prices.Contains(50.5))
